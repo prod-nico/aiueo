@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>あいうえお simple</title>
+    <style type="text/css">
+    <!-- 
+ body{
+ background-image: url("kana.jpeg") ; background-repeat:no-repeat; background-size:contain; width:960px; height:640px; }
+
+ .item {
+ width: 75px; height: 106px; text-align: center; margin: 0px; margin-top: 14px; background:rgba(255,255,255,0.5); }
+
+ .gyou{
+ float:right; margin-top: 15px;
+ margin-right: 7.7px; }
+
+ #a-gyou{
+ margin-right: 115px; }
+ -->
+</style>
+
+<script type="text/javascript">
+　　　 function ring(num) {
+ 　　　　document.getElementById("Sound"+num).play();
+ 　　　 }
+ </script>
+  </head>
+  <body>
+
+  <!-- =========================== -->
+  <!-- ▼ボタン -->
+  <!-- =========================== -->
+    <div id="a-gyou" class="gyou">
+      <div class="item" onclick="ring(1); " value="あ" >あ</div>
+      <div class="item" onclick="ring(2); " value="い">い</div>
+      <div class="item" onclick="ring(3); " value="う">う</div>
+      <div class="item" onclick="ring(4); " value="え">え</div>
+      <div class="item" onclick="ring(5); " value="お">お</div>
+    </div>
+    <div id="ka-gyou" class="gyou">
+      <div class="item" onclick="ring(11); " value="か" >か</div>
+      <div class="item" onclick="ring(12); " value="き" >き</div>
+      <div class="item" onclick="ring(13); " value="く" >く</div>
+      <div class="item" onclick="ring(14); " value="け" >け</div>
+      <div class="item" onclick="ring(15); " value="こ" >こ</div>
+    </div>
+    <div id="sa-gyou" class="gyou">
+      <div class="item" onclick="ring(21); " value="さ" >さ</div>
+      <div class="item" onclick="ring(22); " value="し" >し</div>
+      <div class="item" onclick="ring(23); " value="す" >す</div>
+      <div class="item" onclick="ring(24); " value="せ" >せ</div>
+      <div class="item" onclick="ring(25); " value="そ" >そ</div>
+    </div>
+    <div id="ta-gyou" class="gyou">
+      <div class="item" onclick="ring(31); " value="た" >た</div>
+      <div class="item" onclick="ring(32); " value="ち" >ち</div>
+      <div class="item" onclick="ring(33); " value="つ" >つ</div>
+      <div class="item" onclick="ring(34); " value="て" >て</div>
+      <div class="item" onclick="ring(35); " value="と" >と</div>
+    </div>
+    <div id="na-gyou" class="gyou">
+      <div class="item" onclick="ring(41); " value="な" >な</div>
+      <div class="item" onclick="ring(42); " value="に" >に</div>
+      <div class="item" onclick="ring(43); " value="ぬ" >ぬ</div>
+      <div class="item" onclick="ring(44); " value="ね" >ね</div>
+      <div class="item" onclick="ring(45); " value="の" >の</div>
+    </div>
+    <div id="ha-gyou" class="gyou">
+      <div class="item" onclick="ring(51); " value="は" >は</div>
+      <div class="item" onclick="ring(52); " value="ひ" >ひ</div>
+      <div class="item" onclick="ring(53); " value="ふ" >ふ</div>
+      <div class="item" onclick="ring(54); " value="へ" >へ</div>
+      <div class="item" onclick="ring(55); " value="ほ" >ほ</div>
+    </div>
+    <div id="ma-gyou" class="gyou">
+      <div class="item" onclick="ring(61); " value="ま" >ま</div>
+      <div class="item" onclick="ring(62); " value="み" >み</div>
+      <div class="item" onclick="ring(63); " value="む" >む</div>
+      <div class="item" onclick="ring(64); " value="め" >め</div>
+      <div class="item" onclick="ring(65); " value="も" >も</div>
+    </div>
+    <div id="ya-gyou" class="gyou">
+      <div class="item" onclick="ring(71); " value="や" >や</div>
+      <div class="item" onclick="ring(72); " value="" ></div>
+      <div class="item" onclick="ring(73); " value="ゆ" >ゆ</div>
+      <div class="item" onclick="ring(74); " value="" ></div>
+      <div class="item" onclick="ring(75); " value="よ" >よ</div>
+    </div>
+    <div id="ra-gyou" class="gyou">
+      <div class="item" onclick="ring(81); " value="ら" >ら</div>
+      <div class="item" onclick="ring(82); " value="り" >り</div>
+      <div class="item" onclick="ring(83); " value="る" >る</div>
+      <div class="item" onclick="ring(84); " value="れ" >れ</div>
+      <div class="item" onclick="ring(85); " value="ろ" >ろ</div>
+    </div>
+    <div id="wa-gyou" class="gyou">
+      <div class="item" onclick="ring(91); " value="わ" >わ</div>
+      <div class="item" onclick="ring(92); " value="" ></div>
+      <div class="item" onclick="ring(93); " value="を" >を</div>
+      <div class="item" onclick="ring(94); " value="" ></div>
+      <div class="item" onclick="ring(95); " value="ん" >ん</div>
+    </div>
+  <!-- =========================== -->
+  <!-- ▼効果音を準備するaudio要素 -->
+  <!-- =========================== -->
+    <audio id="Sound1" preload="auto">
+    <source src="sound/あ.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound2" preload="auto">
+    <source src="sound/い.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound3" preload="auto">
+    <source src="sound/う.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound4" preload="auto">
+    <source src="sound/え.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound5" preload="auto">
+    <source src="sound/お.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound11" preload="auto">
+    <source src="sound/か.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound12" preload="auto">
+    <source src="sound/き.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound13" preload="auto">
+    <source src="sound/く.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound14" preload="auto">
+    <source src="sound/け.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound15" preload="auto">
+    <source src="sound/こ.m4a" type="audio/mp3">
+    </audio>
+<audio id="Sound21" preload="auto">
+    <source src="sound/さ.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound22" preload="auto">
+    <source src="sound/し.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound23" preload="auto">
+    <source src="sound/す.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound24" preload="auto">
+    <source src="sound/せ.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound25" preload="auto">
+    <source src="sound/そ.m4a" type="audio/mp3">
+    </audio>
+<audio id="Sound31" preload="auto">
+    <source src="sound/た.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound32" preload="auto">
+    <source src="sound/ち.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound33" preload="auto">
+    <source src="sound/つ.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound34" preload="auto">
+    <source src="sound/て.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound35" preload="auto">
+    <source src="sound/と.m4a" type="audio/mp3">
+    </audio>
+<audio id="Sound41" preload="auto">
+    <source src="sound/な.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound42" preload="auto">
+    <source src="sound/に.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound43" preload="auto">
+    <source src="sound/ぬ.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound44" preload="auto">
+    <source src="sound/ね.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound45" preload="auto">
+    <source src="sound/の.m4a" type="audio/mp3">
+    </audio>
+<audio id="Sound51" preload="auto">
+    <source src="sound/は.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound52" preload="auto">
+    <source src="sound/ひ.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound53" preload="auto">
+    <source src="sound/ふ.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound54" preload="auto">
+    <source src="sound/へ.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound55" preload="auto">
+    <source src="sound/ほ.m4a" type="audio/mp3">
+    </audio>
+<audio id="Sound61" preload="auto">
+    <source src="sound/ま.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound62" preload="auto">
+    <source src="sound/み.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound63" preload="auto">
+    <source src="sound/む.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound64" preload="auto">
+    <source src="sound/め.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound65" preload="auto">
+    <source src="sound/も.m4a" type="audio/mp3">
+    </audio>
+<audio id="Sound71" preload="auto">
+    <source src="sound/や.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound72" preload="auto">
+    <source src="sound/い.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound73" preload="auto">
+    <source src="sound/ゆ.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound74" preload="auto">
+    <source src="sound/え.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound75" preload="auto">
+    <source src="sound/よ.m4a" type="audio/mp3">
+    </audio>
+<audio id="Sound81" preload="auto">
+    <source src="sound/ら.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound82" preload="auto">
+    <source src="sound/り.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound83" preload="auto">
+    <source src="sound/る.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound84" preload="auto">
+    <source src="sound/れ.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound85" preload="auto">
+    <source src="sound/ろ.m4a" type="audio/mp3">
+    </audio>
+<audio id="Sound91" preload="auto">
+    <source src="sound/わ.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound93" preload="auto">
+    <source src="sound/を.m4a" type="audio/mp3">
+    </audio>
+    <audio id="Sound95" preload="auto">
+    <source src="sound/ん.m4a" type="audio/mp3">
+    </audio>
+  </body>
+</html>
